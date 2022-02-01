@@ -11,7 +11,12 @@ function App() {
   })
 
   function Success(props){
-    setCurrentLocation({...CurrentLocation, latitude: props.coords.latitude, longitude: props.coords.longitude})
+
+    setCurrentLocation({...CurrentLocation, 
+      latitude: props.coords.latitude, 
+      longitude: props.coords.longitude
+    })
+
     //console.log(CurrentLocation)
   }
 
@@ -36,21 +41,25 @@ function App() {
 
     let res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_KEY}`)
 
-    console.log(res)
-    console.log(res.data.clouds)
-    console.log(res.data.name)
-    console.log(res.data.weather[0].description)
+    //console.log(res)
+    //console.log(res.data.name)
+    //console.log(res.data.weather[0].description)
+
+    let AuxVar = res
+
+    console.log('Current Weather:', AuxVar)
 
     setCurrentWeather({...CurrentWeather, 
-      clouds: '0',
-      temp: res.data.main.temp,
-      feels_like: res.data.main.feels_like,
-      name: res.data.name,
-      country: res.data.sys.country,
-      weather: res.data.weather[0].description,
-      timezone: res.data.timezone
+      clouds: AuxVar.data.clouds,
+      temp: AuxVar.data.main.temp,
+      feels_like: AuxVar.data.main.feels_like,
+      name: AuxVar.data.name,
+      country: AuxVar.data.sys.country,
+      weather: AuxVar.data.weather[0].description,
+      timezone: AuxVar.data.timezone
     })
 
+    console.log('Current Weather:', AuxVar)
     console.log(CurrentWeather)
   }
 
