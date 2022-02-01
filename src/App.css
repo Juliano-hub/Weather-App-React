@@ -37,14 +37,21 @@
   }
 }
 
+body{
+  background-image: linear-gradient(rgb(211, 203, 90), rgb(158, 238, 92));
+  background-attachment: fixed;
+}
 
 .ShowButton{
-  margin-top: 20px;
+  margin-top: 300px;
   height: 30px;
   width: auto;
   background: rgb(223, 180, 41);
   margin-left: center;
   border-width: thin;
   border-style: ridge;
-  border-radius: 6px
+  border-radius: 6px;
+}
+.Centering{
+  text-align: center;
 }
