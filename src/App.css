@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.ShowButton{
+  margin-top: 20px;
+  height: 30px;
+  width: auto;
+  background: rgb(223, 180, 41);
+  margin-left: center;
+  border-width: thin;
+  border-style: ridge;
+  border-radius: 6px
+}
