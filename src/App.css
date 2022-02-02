@@ -38,20 +38,47 @@
 }
 
 body{
-  background-image: linear-gradient(rgb(211, 203, 90), rgb(158, 238, 92));
+  background-color: #1b1b1ce0;
   background-attachment: fixed;
 }
 
 .ShowButton{
-  margin-top: 300px;
-  height: 30px;
+  margin-top: 100px;
+  height: 40px;
   width: auto;
-  background: rgb(223, 180, 41);
+  background:  #808080;
   margin-left: center;
   border-width: thin;
   border-style: ridge;
   border-radius: 6px;
 }
+
 .Centering{
   text-align: center;
+}
+
+.Day{
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(#8ff7f7, rgb(177, 237, 252));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-width: 10px 5px 5px;
+  border-color: #808080;
+}
+
+.Night{
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(rgb(137, 34, 255), black);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  border-width: 10px 5px 5px;
+  border-color: #808080;
 }
