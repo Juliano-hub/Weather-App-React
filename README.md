@@ -4,5 +4,5 @@ Aplicativo feito como treino, é capaz de pegar a latitude e longitude do usuár
 
 # process.env.REACT_APP_KEY
 **REACT_APP_KEY** é a variável que foi declarada dentro de um arquivo **.env**, para evitar de ser feito o upload deste arquivo publicamente. <br/>
-A chave é gerada pela sua conta no site **OpenWeatherMap**, onde essa key deve ser atribuída a essa variável **REACT_APP_KEY** no arquivo 
-**.env** e chamada np **app.js** pelo comando **process.env.REACT_APP_KEY**
+A chave é gerada por sua conta no site **OpenWeatherMap**, onde essa key deve ser atribuída a essa variável **REACT_APP_KEY** no arquivo 
+**.env** e chamada no **app.js** pelo comando **process.env.REACT_APP_KEY**
