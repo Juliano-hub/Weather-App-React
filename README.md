@@ -1,5 +1,5 @@
 # Weather-App-React
-Aplicativo feio como treino, é capaz de pegar a latitude e longitude do usuário pelo navegador, e após isso, é feito uma chamada de API
+Aplicativo feito como treino, é capaz de pegar a latitude e longitude do usuário pelo navegador, e após isso, é feito uma chamada de API
 **OpenWeatherMap** passando essas coordenadas e a key gerada pela conta.
 
 # process.env.REACT_APP_KEY
