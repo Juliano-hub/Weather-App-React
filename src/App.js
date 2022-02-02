@@ -11,8 +11,10 @@ function App() {
     longitude: ''
   })
 
+  // if accept the location access permission
   function Success(props){
 
+    // get users coords
     setCurrentLocation({...CurrentLocation, 
       latitude: props.coords.latitude, 
       longitude: props.coords.longitude
@@ -21,11 +23,14 @@ function App() {
     //console.log(CurrentLocation)
   }
 
+   // in case of not accept the location access permission
   function error(props){
     window.alert('Location is required for application! Please clear this setting, click OK and then accept access to the location!')
     window.location.reload()
   }
 
+
+  // always shows updated weather data 
   const [CurrentWeather, setCurrentWeather] = useState({
     clouds: '',
     temp: '',
@@ -37,6 +42,8 @@ function App() {
     hours: ''
   })
 
+
+  // call the API and return the data
   let Weather = async(lat, lon) => {
     //console.log('In:', lat, lon)
 
@@ -66,11 +73,13 @@ function App() {
     setbitOnClick(1)
   }
 
+  // always get the updated coordinates 
   useEffect (() =>{
     navigator.geolocation.getCurrentPosition(Success, error)
     //console.log('Out:', CurrentLocation.latitude)
   })
 
+  // get current hour to change the icon and background
   function GetHours(){
     var date = new Date();
     let Hours = date.getHours()
